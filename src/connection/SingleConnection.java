@@ -4,12 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 /**
- * Responsável por fazer conexão com o banco de dados
+ * ResponsÃ¡vel por fazer conexÄo com o banco de dados
  * @author Israel Gomes
  *
  */
 public class SingleConnection {
-		private static String banco = "jdbc:postgresql://localhost:5432/posjava";
+		private static String banco = "jdbc:postgresql://localhost:5432/postgres";
 		private static String senha = "admin";
 		private static String user = "postgres";
 		private static Connection connection = null; 
@@ -24,11 +24,11 @@ public class SingleConnection {
 		
 		private static void conectar(){
 			try {
-				//se for == null, irá fazer a conexão, caso contrário irá retornar a conexão que já existe
+				//se for == null, irï¿½ fazer a conexï¿½o, caso contrï¿½rio irï¿½ retornar a conexï¿½o que jï¿½ existe
 				if(connection == null){
 					Class.forName("org.postgresql.Driver");
 					connection = DriverManager.getConnection(banco, user, senha);
-					//faz com que a modificação não seja commitada de forma automática, somente quando quiser 
+					//faz com que a modificaï¿½ï¿½o nï¿½o seja commitada de forma automï¿½tica, somente quando quiser 
 					connection.setAutoCommit(false);
 					System.out.println("Conectou com sucesso!");
 

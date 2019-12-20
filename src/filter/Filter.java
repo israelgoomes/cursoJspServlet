@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebFilter;
 
 import connection.SingleConnection;
 
-//com isso toda url/requisição será interceptada pela classe Filter
+//com isso toda url/requisiï¿½ï¿½o serï¿½ interceptada pela classe Filter
 @WebFilter(urlPatterns={"/*"})
 public class Filter implements javax.servlet.Filter{
 

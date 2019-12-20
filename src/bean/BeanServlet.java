@@ -2,28 +2,66 @@ package bean;
 
 public class BeanServlet {
 
-	private String login;
+	private Long idUser;
+	private String nome;
 	private String senha;
+	private String email;
+	private String celular;
+	private String residencial;
 	
 	
+	public String getCelular() {
+		return celular;
+	}
+
+
+
+	public void setCelular(String celular) {
+		this.celular = celular;
+	}
+
+
+
+	public String getResidencial() {
+		return residencial;
+	}
+
+
+
+	public void setResidencial(String residencial) {
+		this.residencial = residencial;
+	}
+
+
+
 	public BeanServlet(){}
 	
 	
-	public boolean validarLoginSenha(String login, String senha){
-		if(login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")){
-			return true;
-		} else {
-			return false;
-		}
-			
+
+	public String getNome() {
+		return nome;
 	}
-	
-	public String getLogin() {
-		return login;
+
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	public void setLogin(String login) {
-		this.login = login;
+
+
+
+	public String getEmail() {
+		return email;
 	}
+
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+
 	public String getSenha() {
 		return senha;
 	}
@@ -31,6 +69,14 @@ public class BeanServlet {
 		this.senha = senha;
 	}
 	
-	
+	public Long getIdUser() {
+		return idUser;
+	}
+
+
+
+	public void setIdUser(Long id_user) {
+		this.idUser = id_user;
+	}
 	
 }
